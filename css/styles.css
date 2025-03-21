@@ -139,6 +139,7 @@ header .container {
   justify-content: center;
   align-items: center;
   border: none;
+  background-color: transparent;
 }
 
 .mob-menu-icon {
@@ -375,6 +376,7 @@ header .container {
     rgba(77, 194, 116, 1),
     rgba(190, 232, 204, 1)
   );
+  overflow: hidden;
 }
 
 .accent-section .section-title {
@@ -389,12 +391,11 @@ header .container {
   position: relative;
   border-radius: 16px;
   padding: 40px 20px;
-  background-color: #fff;
-  z-index: 0;
+  z-index: 1;
+  /* overflow: clip; */
 }
 
-.accent-list-wrapper::before {
-  content: '';
+.accent-list-deco1 {
   position: absolute;
   top: 0;
   left: 0;
@@ -403,11 +404,11 @@ header .container {
   border-radius: 16px;
   background-color: rgba(255, 255, 255, 0.5);
   transform: rotate(9deg);
+  
   z-index: -999;
 }
 
-.accent-list-wrapper::after {
-  content: '';
+.accent-list-deco2 {
   position: absolute;
   top: 0;
   left: 0;
@@ -416,6 +417,18 @@ header .container {
   border-radius: 16px;
   background-color: #d4fde1;
   transform: rotate(-11deg);
+  
+  z-index: -999;
+}
+
+.accent-list-deco3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  background-color: #fff;
   z-index: -999;
 }
 
@@ -467,5 +480,35 @@ header .container {
 .accent-button:hover,
 .accent-button:focus {
   background-color: #38ae5f;
+}
+/* #endregion */
+
+/* #region Teachers */
+
+.teacher-item {
+  text-align: center;
+}
+
+.teacher-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.teacher-img {
+  margin: 0 auto;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.teacher-name {
+  margin-bottom: 8px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+}
+
+.teacher-descr {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 171%;
+  color: rgba(18, 20, 23, 0.5);
 }
 /* #endregion */
