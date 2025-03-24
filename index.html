@@ -124,9 +124,9 @@
                   </p>
                 </li>
               </ul>
-              <button class="lessons-card-button" type="button">
+              <a class="lessons-card-button practice-lesson practice" href="#contact-form">
                 Leave an application
-              </button>
+              </a>
             </li>
             <li class="lessons-card-item accent-card">
               <h3 class="lessons-card-title">Standard</h3>
@@ -143,9 +143,9 @@
                   </p>
                 </li>
               </ul>
-              <button class="button lessons-card-button" type="button">
+              <a class="lessons-card-button standard-lesson standard" href="#contact-form">
                 Leave an application
-              </button>
+              </a>
             </li>
             <li class="lessons-card-item">
               <h3 class="lessons-card-title">Individual</h3>
@@ -161,9 +161,9 @@
                   </p>
                 </li>
               </ul>
-              <button class="button lessons-card-button" type="button">
+              <a class="lessons-card-button individual-lesson individual" href="#contact-form">
                 Leave an application
-              </button>
+              </a>
             </li>
           </ul>
         </div>
@@ -208,9 +208,9 @@
                 skills and confidence grow with every session.
               </li>
             </ul>
-            <button class="button accent-button" type="button">
+            <a class="accent-button" href="#contact-form">
               Leave an application
-            </button>
+            </a>
             
             <div class="accent-list-deco1"></div>
             <div class="accent-list-deco2"></div>
@@ -372,11 +372,21 @@
                 Volodymyr
               </label>
             </div>
-    
-            <button class="radio-teachers-accept-button" type="submit">Send</button>
-          </div>
-        </form>
 
+            
+          </div>
+
+          <div class="radio-lessons">
+            <h3 class="radio-teachers-subtitle">Choose your lesson</h3>
+            <input class="radio-lesson-input visually-hidden" type="radio" name="lessons" id="practice" value="practice">
+            <label class="radio-lesson-tipe" for="practice">Practice</label>
+            <input class="radio-lesson-input visually-hidden" type="radio" name="lessons" id="standard" value="standard" checked>
+            <label class="radio-lesson-tipe" for="standard">Standard</label>
+            <input class="radio-lesson-input visually-hidden" type="radio" name="lessons" id="individual" value="individual">
+            <label class="radio-lesson-tipe" for="individual">Individual</label>
+          </div>
+          <button class="radio-teachers-accept-button" type="submit">Send</button>
+        </form>
         </div>
       </section>
 
@@ -411,6 +421,7 @@
       </section>  
       
       <!-- Mob menu -->
+
        <div class="burger-menu-bg">
           <div class="mobmenu-container">
             <button class="mobmenu-close-btn" type="button">
@@ -446,7 +457,7 @@
                     href="https://facebook.com/MaximVeretnov" 
                     target="_blank" 
                     rel="noopener noreferrer">
-                      <svg class="mob-social-link-icon" width="26" height="26">
+                      <svg class="mob-social-link-icon menu-icon" width="26" height="26">
                         <use href="./img/icons.svg#facebook"></use>
                       </svg>
                   </a>
@@ -457,7 +468,7 @@
                     href="https://instagram.com/veretnov.m.a" 
                     target="_blank" 
                     rel="noopener noreferrer">
-                      <svg class="mob-social-link-icon" width="26" height="26">
+                      <svg class="mob-social-link-icon menu-icon" width="26" height="26">
                         <use href="./img/icons.svg#instagram"></use>
                       </svg>
                   </a>
@@ -468,7 +479,7 @@
                     href="https://youtube.com" 
                     target="_blank" 
                     rel="noopener noreferrer">
-                      <svg class="mob-social-link-icon" width="26" height="26">
+                      <svg class="mob-social-link-icon menu-icon" width="26" height="26">
                         <use href="./img/icons.svg#youtube"></use>
                       </svg>
                   </a>
@@ -525,8 +536,10 @@
             target="_blank" 
             rel="noopener noreferrer"
             >
-            <img src="./img/icons/facebook.svg" alt="facebook" width="26" height="26">
-          </a>
+              <svg class="mob-social-link-icon footer-icon" width="26" height="26">
+                <use href="./img/icons.svg#facebook"></use>
+              </svg>
+            </a>
         </li>
         <li>
           <a 
@@ -535,8 +548,10 @@
             target="_blank" 
             rel="noopener noreferrer"
           >
-          <img src="./img/icons/instagram.svg" alt="instagram" width="26" height="26">
-        </a>
+            <svg class="mob-social-link-icon footer-icon" width="26" height="26">
+              <use href="./img/icons.svg#instagram"></use>
+            </svg>
+          </a>
       </li>
       <li>
           <a 
@@ -545,8 +560,10 @@
             target="_blank" 
             rel="noopener noreferrer"
             >
-            <img src="./img/icons/youtube.svg" alt="youtube" width="26" height="26">
-          </a>
+              <svg class="mob-social-link-icon footer-icon" width="26" height="26">
+                <use href="./img/icons.svg#youtube"></use>
+              </svg>
+            </a>
         </li>
         </ul>
         
