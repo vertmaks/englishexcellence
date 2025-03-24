@@ -89,3 +89,21 @@ mobMenuNav.addEventListener("click", navClickReaction);
 lessonBtns.addEventListener("click", lessonsOptions);
 
 applicationForm.addEventListener("submit", formSubmit);
+
+// Swiper
+
+document.addEventListener('DOMContentLoaded', function () {
+    const swiper = new Swiper(".swiper", {
+        direction: 'horizontal',
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: true,
+        },
+        grabCursor: true,
+        touchRatio: 1,
+        simulateTouch: true,
+    });
+});

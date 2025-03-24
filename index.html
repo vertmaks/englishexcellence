@@ -31,6 +31,13 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Swiper library -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body class="body">
@@ -397,9 +404,9 @@
           <h2 class="section-title">What our <span class="deco-title">students</span> say</h2>
           <p class="section-text">Hear from our students about their learning journey with us, as they share their experiences, progress, and the transformative impact </p>
         
-
-        <div class="reviews-wrapper">
-          <div class="reviewer-container">
+          <div class="swiper">
+            <div class="swiper-slide reviews-wrapper">
+              <div class="reviewer-container">
             <img 
               class="reviewer-img" 
               srcset="
@@ -412,10 +419,49 @@
                 <p class="reviewer-name">Anna</p>
                 <p class="reviewer-job">Student</p>
               </div>
+              </div>
+              <p class="review">
+                My experience at the language school has been nothing short of amazing. The teachers are dedicated and the learning environment is stimulating. I feel more confident in my English skills.
+              </p>
             </div>
-            <p class="review">
-              My experience at the language school has been nothing short of amazing. The teachers are dedicated and the learning environment is stimulating. I feel more confident in my English skills.
-            </p>
+            <div class="swiper-slide reviews-wrapper">
+              <div class="reviewer-container">
+            <img 
+              class="reviewer-img" 
+              srcset="
+                ./img/reviews/img6.png 1x,
+                ./img/reviews/img6.png 2x
+              "
+              src="./img/reviews/img6.png"
+              alt="Reviewer photo">
+              <div class="reviewer-info">
+                <p class="reviewer-name">Mykhailo</p>
+                <p class="reviewer-job">Student</p>
+              </div>
+              </div>
+              <p class="review">
+                The school offers a great balance of language theory and practical exercises. The personalized feedback from the teachers has helped me improve my weak areas.
+              </p>
+            </div>
+            <div class="swiper-slide reviews-wrapper">
+              <div class="reviewer-container">
+            <img 
+              class="reviewer-img" 
+              srcset="
+                ./img/reviews/img7.png 1x,
+                ./img/reviews/img7.png 2x
+              "
+              src="./img/reviews/img7.png"
+              alt="Reviewer photo">
+              <div class="reviewer-info">
+                <p class="reviewer-name">Victoria</p>
+                <p class="reviewer-job">Student</p>
+              </div>
+              </div>
+              <p class="review">
+                I love the dynamic and interactive teaching methods used here. It's a great place to learn English in a fun and effective way. I have definitely seen a big improvement in my language skills.
+              </p>
+            </div>
           </div>
         </div>
       </section>  
@@ -581,7 +627,8 @@
         
       </div>
     </footer>
-    
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="./js/index.js"></script>
   </body>
 </html>
