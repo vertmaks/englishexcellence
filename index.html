@@ -49,7 +49,7 @@
 
     <main>
       <!-- Hero section -->
-      <section class="hero-section">
+      <section class="hero-section" id="hero">
         <div class="container">
           <div class="hero-bg">
             <h1 class="hero-title">
@@ -98,7 +98,7 @@
       </section>
 
       <!-- Lessons section -->
-      <section class="lessons-section">
+      <section class="lessons-section" id="lessons">
         <div class="container">
           <h2 class="section-title">
             Our <span class="deco-title">lessons</span>
@@ -170,7 +170,7 @@
       </section>
       
       <!-- Accent section -->
-      <section class="accent-section">
+      <section class="accent-section" id="accent">
         <div class="container">
           <h2 class="section-title">
             Master the <span class="heading-accent">Language</span> with Our
@@ -221,7 +221,7 @@
       
       <!-- Teacher section -->
 
-      <section class="teacher-section">
+      <section class="teacher-section" id="teachers">
         <div class="container">
           <h2 class="section-title">Meet our <span class="deco-title">teachers</span></h2>
           <p class="section-text">
@@ -296,16 +296,191 @@
 
       <!-- Contact form section -->
 
-      <section class="contact">
+      <section class="contact" id="contact-form">
         <div class="container">
           <h2 class="section-title">Leave an <span class="deco-title">application</span></h2>
           <p class="section-text">Please use the form below to contact us. Enter your name, email, and message and we'll get back to you shortly.</p>
         </div>
+        <div class="form-wrapper">
+        <form class="main-form" name="applicationForm">
+          <input 
+            class="main-form-input"
+            type="text"
+            name="userName"
+            placeholder="Name"
+            required
+          >
+          <input
+            class="main-form-input" 
+            type="email"
+            name="userEmail"
+            placeholder="Email"
+            required
+          >
+          <input
+            class="main-form-input"
+            type="tel"
+            name="userPhone"
+            placeholder="Phone"
+          >
+          <textarea
+            class="main-form-comment" 
+            type="text"
+            name="userComment"
+            rows="3"
+            placeholder="Comment"></textarea>
+
+          <div class="radion-teachers">
+            <h3 class="radio-teachers-subtitle">Choose a teacher</h3>
+
+            <div class="radion-wrapper">
+              <input class="radio-input visually-hidden" type="radio" name="teacher" id="maria" value="maria" checked>
+              <label class="radio-label" for="maria">
+                <span class="custom-radio-input">
+                  <span class="custom-radio-accepted"></span>
+                </span>
+                Maria
+              </label>
+            </div>
+
+            <div class="radion-wrapper">
+              <input class="radio-input visually-hidden" type="radio" name="teacher" id="artem" value="artem">
+              <label class="radio-label" for="artem">
+                <span class="custom-radio-input">
+                  <span class="custom-radio-accepted"></span>
+                </span>
+                Artem
+              </label>
+            </div>
+
+            <div class="radion-wrapper">
+              <input class="radio-input visually-hidden" type="radio" name="teacher" id="ilona" value="ilona">
+              <label class="radio-label" for="ilona">
+                <span class="custom-radio-input">
+                  <span class="custom-radio-accepted"></span>
+                </span>
+                Ilona
+              </label>
+            </div>
+            
+            <div class="radion-wrapper">
+              <input class="radio-input visually-hidden" type="radio" name="teacher" id="volodymyr" value="volodymyr">
+              <label class="radio-label" for="volodymyr">
+                <span class="custom-radio-input">
+                  <span class="custom-radio-accepted"></span>
+                </span>
+                Volodymyr
+              </label>
+            </div>
+    
+            <button class="radio-teachers-accept-button" type="submit">Send</button>
+          </div>
+        </form>
+
+        </div>
       </section>
-      
+
+      <!-- Reviews section -->
+
+      <section class="reviews-section" id="reviews">
+        <div class="container">
+          <h2 class="section-title">What our <span class="deco-title">students</span> say</h2>
+          <p class="section-text">Hear from our students about their learning journey with us, as they share their experiences, progress, and the transformative impact </p>
+        
+
+        <div class="reviews-wrapper">
+          <div class="reviewer-container">
+            <img 
+              class="reviewer-img" 
+              srcset="
+                ./img/reviews/img5.png 1x,
+                ./img/reviews/img5.png 2x
+              "
+              src="./img/reviews/img5.png"
+              alt="Reviewer photo">
+              <div class="reviewer-info">
+                <p class="reviewer-name">Anna</p>
+                <p class="reviewer-job">Student</p>
+              </div>
+          </div>
+          <p class="review">
+            My experience at the language school has been nothing short of amazing. The teachers are dedicated and the learning environment is stimulating. I feel more confident in my English skills.
+          </p>
+        </div>
+        </div>
+      </section>  
     </main>
+
     <footer>
-      <div class="container"></div>
+      <div class="container">
+        <a class="logo" href="./index.html"
+          >english<span class="logo-accent">excellence</span>.</a
+        >
+        <address class="footer-address">
+          <ul class="address-list">
+            <li class="address-item">
+              <h3 class="address-subtitle">Phone number:</h3>
+              <a href="tel:+380684439426" class="address-contacts">+380 (68) 443-94-26</a>
+            </li>
+            <li class="address-item">
+              <h3 class="address-subtitle">Address:</h3>
+              <a 
+                href="https://www.google.de/maps/search/32a+M.+Bazhana+ave/@50.3939955,30.6078241,18z?entry=ttu&g_ep=EgoyMDI1MDMxOC4wIKXMDSoASAFQAw%3D%3D" class="address-contacts" 
+                target="_blank" 
+                rel="noopener no-referrer">32a M. Bazhana ave</a>
+            </li>
+          </ul>
+        </address>
+        <nav class="footer-nav">
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item">
+              <a class="footer-nav-link" href="#about">About us</a>
+            </li>
+            <li class="footer-nav-item">
+              <a class="footer-nav-link" href="#lessons">Our lessons</a>
+            </li>
+            <li class="footer-nav-item">
+              <a class="footer-nav-link" href="#teachers">Teachers</a>
+            </li>
+            <li class="footer-nav-item">
+              <a class="footer-nav-link" href="#reviews">Reviews</a>
+            </li>
+            <li class="footer-nav-item">
+              <a class="footer-nav-link" href="#contact-form">Contact us</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="social-links-list">
+          <a 
+            class="social-links-item"
+            href="#"
+            target="_blank" 
+            rel="noopener no-referrer"
+          >
+            <img src="./img/icons/facebook.svg" alt="facebook" width="26" height="26">
+          </a>
+          <a 
+            class="social-links-item"
+            href="#"
+            target="_blank" 
+            rel="noopener no-referrer"
+          >
+            <img src="./img/icons/instagram.svg" alt="instagram" width="26" height="26">
+          </a>
+          <a 
+            class="social-links-item"
+            href="#"
+            target="_blank" 
+            rel="noopener no-referrer"
+          >
+            <img src="./img/icons/youtube.svg" alt="youtube" width="26" height="26">
+          </a>
+        </ul>
+        
+        <hr style="stroke-width: 1px;
+stroke: rgba(255, 255, 255, 0.1);">
+
+      </div>
     </footer>
   </body>
 </html>
