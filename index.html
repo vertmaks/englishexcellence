@@ -23,7 +23,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
       integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      referrerpolicy="noreferrer"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,7 +33,7 @@
     />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
-  <body>
+  <body class="body">
     <header>
       <div class="container">
         <a class="logo" href="./index.html"
@@ -56,9 +56,9 @@
               Discover the joy of learning
               <span class="heading-accent">English</span> with us!
             </h1>
-            <button class="order-btn" type="button">
+            <a class="order-btn" href="#contact-form">
               Leave an application
-            </button>
+            </a>
             <a class="scroll-down" href="#about">
               <svg class="arrow-icon" width="20" height="20">
                 <use href="./img/icons.svg#arrow"></use>
@@ -402,15 +402,82 @@
                 <p class="reviewer-name">Anna</p>
                 <p class="reviewer-job">Student</p>
               </div>
+            </div>
+            <p class="review">
+              My experience at the language school has been nothing short of amazing. The teachers are dedicated and the learning environment is stimulating. I feel more confident in my English skills.
+            </p>
           </div>
-          <p class="review">
-            My experience at the language school has been nothing short of amazing. The teachers are dedicated and the learning environment is stimulating. I feel more confident in my English skills.
-          </p>
-        </div>
         </div>
       </section>  
+      
+      <!-- Mob menu -->
+       <div class="burger-menu-bg">
+          <div class="mobmenu-container">
+            <button class="mobmenu-close-btn" type="button">
+              <svg class="mobmenu-close-icon" width="18" height="18">
+                <use href="./img/icons.svg#close"></use>
+              </svg>
+            </button>
+    
+              <nav class="mobmenu-nav">
+                <ul class="mob-nav-list">
+                  <li class="mob-nav-item">
+                    <a href="#about" class="mob-nav-link">About us</a>
+                  </li>
+                  <li class="mob-nav-item">
+                    <a href="#lessons" class="mob-nav-link">Our lessons</a>
+                  </li>
+                  <li class="mob-nav-item">
+                    <a href="#teachers" class="mob-nav-link">Teachers</a>
+                  </li>
+                  <li class="mob-nav-item">
+                    <a href="#reviews" class="mob-nav-link">Reviews</a>
+                  </li>
+                  <li class="mob-nav-item">
+                    <a href="#contact-form" class="mob-nav-link">Contact us</a>
+                  </li>
+                </ul>
+              </nav>
+    
+              <ul class="mob-social-links-list">
+                <li class="mob-social-links-item">
+                  <a 
+                    class="mob-social-link"
+                    href="https://facebook.com/MaximVeretnov" 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                      <svg class="mob-social-link-icon" width="26" height="26">
+                        <use href="./img/icons.svg#facebook"></use>
+                      </svg>
+                  </a>
+                </li>
+                <li class="mob-social-links-item">
+                  <a 
+                    class="mob-social-link"
+                    href="https://instagram.com/veretnov.m.a" 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                      <svg class="mob-social-link-icon" width="26" height="26">
+                        <use href="./img/icons.svg#instagram"></use>
+                      </svg>
+                  </a>
+                </li>
+                <li class="mob-social-links-item">
+                  <a 
+                    class="mob-social-link"
+                    href="https://youtube.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                      <svg class="mob-social-link-icon" width="26" height="26">
+                        <use href="./img/icons.svg#youtube"></use>
+                      </svg>
+                  </a>
+                </li>
+              </ul>
+          </div>
+       </div>
     </main>
-
+    
     <footer>
       <div class="container">
         <a class="logo" href="./index.html"
@@ -425,9 +492,9 @@
             <li class="address-item">
               <h3 class="address-subtitle">Address:</h3>
               <a 
-                href="https://www.google.de/maps/search/32a+M.+Bazhana+ave/@50.3939955,30.6078241,18z?entry=ttu&g_ep=EgoyMDI1MDMxOC4wIKXMDSoASAFQAw%3D%3D" class="address-contacts" 
-                target="_blank" 
-                rel="noopener no-referrer">32a M. Bazhana ave</a>
+              href="https://www.google.de/maps/search/32a+M.+Bazhana+ave/@50.3939955,30.6078241,18z?entry=ttu&g_ep=EgoyMDI1MDMxOC4wIKXMDSoASAFQAw%3D%3D" class="address-contacts" 
+              target="_blank" 
+              rel="noopener noreferrer">32a M. Bazhana ave</a>
             </li>
           </ul>
         </address>
@@ -451,36 +518,53 @@
           </ul>
         </nav>
         <ul class="social-links-list">
-          <a 
+          <li>
+            <a 
             class="social-links-item"
-            href="#"
+            href="https://facebook.com/MaximVeretnov"
             target="_blank" 
-            rel="noopener no-referrer"
-          >
+            rel="noopener noreferrer"
+            >
             <img src="./img/icons/facebook.svg" alt="facebook" width="26" height="26">
           </a>
+        </li>
+        <li>
           <a 
-            class="social-links-item"
-            href="#"
+          class="social-links-item"
+            href="https://instagram.com/veretnov.m.a"
             target="_blank" 
-            rel="noopener no-referrer"
+            rel="noopener noreferrer"
           >
-            <img src="./img/icons/instagram.svg" alt="instagram" width="26" height="26">
-          </a>
+          <img src="./img/icons/instagram.svg" alt="instagram" width="26" height="26">
+        </a>
+      </li>
+      <li>
           <a 
-            class="social-links-item"
-            href="#"
+          class="social-links-item"
+            href="https://youtube.com"
             target="_blank" 
-            rel="noopener no-referrer"
-          >
+            rel="noopener noreferrer"
+            >
             <img src="./img/icons/youtube.svg" alt="youtube" width="26" height="26">
           </a>
+        </li>
         </ul>
         
-        <hr style="stroke-width: 1px;
-stroke: rgba(255, 255, 255, 0.1);">
-
+        <hr class="footer-line">
+        
+        <p class="copyright">&copy;2023  English Excellence. All rights reserved.</p>
+        <ul class="policy-list">
+          <li class="policy-item">
+            <a class="policy-item-link" href="#">Privacy Policy</a>
+          </li>
+          <li class="policy-item">
+            <a class="policy-item-link" href="#">Terms of Service</a>
+          </li>
+        </ul>
+        
       </div>
     </footer>
+    
+    <script type="module" src="./js/index.js"></script>
   </body>
 </html>
