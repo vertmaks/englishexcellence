@@ -93,24 +93,37 @@ applicationForm.addEventListener("submit", formSubmit);
 // Swiper
 
 const splide = new Splide( '.splide', {
-  type       : 'loop',
-//   speed      : 400,
-  heightRatio: 0.9,
-  gap: 20,
+  type: 'loop',
+  mediaQuery: 'min',
+//   heightRatio: 0.9,
+    gap: "32px",
+  perPage: 1,
   drag: true,
-  pagination : false,
-  arrows     : false,
-  autoplay   : true,
-  interval   : 5000,
+  pagination: false,
+  arrows: false,
+  autoplay: false,
+  interval: 5000,
   pauseOnHover: true,
+  perPage: 1,
+  breakpoints: {
+    768: {
+        // heightRatio: 0.9,
+        perPage: 2,
+        autoplay: false,
+    },
+    1280: {
+        type: 'slide',
+        perPage: 3,
+    },
+  },
 } );
 const bar    = splide.root.querySelector( '.my-slider-progress-bar' );
 
-// Updates the bar width whenever the carousel moves:
-splide.on( 'mounted move', function () {
-  const end  = splide.Components.Controller.getEnd() + 1;
-  const rate = Math.min( ( splide.index + 1 ) / end, 1 );
-  bar.style.width = String( 100 * rate ) + '%';
-} );
+
+// splide.on( 'mounted move', function () {
+//   const end  = splide.Components.Controller.getEnd() + 1;
+//   const rate = Math.min( ( splide.index + 1 ) / end, 1 );
+//   bar.style.width = String( 100 * rate ) + '%';
+// } );
 
 splide.mount();

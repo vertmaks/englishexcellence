@@ -40,9 +40,28 @@
   <body class="body">
     <header>
       <div class="container">
-        <a class="logo" href="./index.html"
-          >english<span class="logo-accent">excellence</span>.</a
-        >
+        <nav class="header-nav">
+          <a class="logo" href="./index.html"
+            >english<span class="logo-accent">excellence</span>.</a
+          >
+          <ul class="header-nav-list">
+            <li class="header-nav-item">
+              <a href="#about" class="mob-nav-link">About us</a>
+            </li>
+            <li class="header-nav-item">
+              <a href="#lessons" class="mob-nav-link">Our lessons</a>
+            </li>
+            <li class="header-nav-item">
+              <a href="#teachers" class="mob-nav-link">Teachers</a>
+            </li>
+            <li class="header-nav-item">
+              <a href="#reviews" class="mob-nav-link">Reviews</a>
+            </li>
+            <li class="header-nav-item">
+              <a href="#contact-form" class="mob-nav-link">Contact us</a>
+            </li>
+          </ul>
+        </nav>
         <button class="mob-menu-btn js-open-menu" type="button">
           <svg class="mob-menu-icon" width="32" height="32">
             <use href="./img/icons.svg#nav"></use>
@@ -80,7 +99,7 @@
           </h2>
           <p class="section-text">
             We are dedicated to providing engaging and effective English
-            language courses in a supportive and stimulating learning
+            language courses <br class="text-format"> in a supportive and stimulating learning
             environment
           </p>
           <ul class="about-list">
@@ -209,12 +228,24 @@
                   </svg>
                 </div>
                 Experience the satisfaction of real progress as your language
-                skills and confidence grow with every session.
+                skills and confidence <br class="text-format">grow with every session.
               </li>
             </ul>
             <a class="accent-button" href="#contact-form">
               Leave an application
             </a>
+
+            <img 
+              class="accent-books-img" 
+              srcset="
+              ./img/accent/books.png 1x, 
+              ./img/accent/books@2x.png 2x
+              "
+              src="./img/accent/books.png" 
+              alt="Stack of books"
+              width="214"
+              height="263"
+            >
             
             <div class="accent-list-deco1"></div>
             <div class="accent-list-deco2"></div>
@@ -233,7 +264,7 @@
             on your journey to English proficiency with personalized and
             engaging instruction
           </p>
-          <ul class="teaher-list">
+          <ul class="teacher-list">
             <li class="teacher-item">
               <img 
                 class="teacher-img"
@@ -303,7 +334,7 @@
       <section class="contact" id="contact-form">
         <div class="container">
           <h2 class="section-title">Leave an <span class="deco-title">application</span></h2>
-          <p class="section-text">Please use the form below to contact us. Enter your name, email, and message and we'll get back to you shortly.</p>
+          <p class="section-text">Please use the form below to contact us. Enter your name, email, and <br class="text-format">message and we'll get back to you shortly.</p>
         </div>
         <div class="form-wrapper">
         <form class="main-form" name="applicationForm">
@@ -337,46 +368,48 @@
           <div class="radion-teachers">
             <h3 class="radio-teachers-subtitle">Choose a teacher</h3>
 
-            <div class="radion-wrapper">
-              <input class="radio-input visually-hidden" type="radio" name="teacher" id="maria" value="maria" checked>
-              <label class="radio-label" for="maria">
-                <span class="custom-radio-input">
-                  <span class="custom-radio-accepted"></span>
-                </span>
-                Maria
-              </label>
-            </div>
+            <div class="teacher-radio-main-wrapper">
 
-            <div class="radion-wrapper">
-              <input class="radio-input visually-hidden" type="radio" name="teacher" id="artem" value="artem">
-              <label class="radio-label" for="artem">
-                <span class="custom-radio-input">
-                  <span class="custom-radio-accepted"></span>
-                </span>
-                Artem
-              </label>
-            </div>
+              <div class="radio-wrapper">
+                <input class="radio-input visually-hidden" type="radio" name="teacher" id="maria" value="maria" checked>
+                <label class="radio-label" for="maria">
+                  <span class="custom-radio-input">
+                    <span class="custom-radio-accepted"></span>
+                  </span>
+                  Maria
+                </label>
+              </div>
 
-            <div class="radion-wrapper">
-              <input class="radio-input visually-hidden" type="radio" name="teacher" id="ilona" value="ilona">
-              <label class="radio-label" for="ilona">
-                <span class="custom-radio-input">
-                  <span class="custom-radio-accepted"></span>
-                </span>
-                Ilona
-              </label>
-            </div>
+              <div class="radio-wrapper">
+                <input class="radio-input visually-hidden" type="radio" name="teacher" id="artem" value="artem">
+                <label class="radio-label" for="artem">
+                  <span class="custom-radio-input">
+                    <span class="custom-radio-accepted"></span>
+                  </span>
+                  Artem
+                </label>
+              </div>
+
+              <div class="radio-wrapper">
+                <input class="radio-input visually-hidden" type="radio" name="teacher" id="ilona" value="ilona">
+                <label class="radio-label" for="ilona">
+                  <span class="custom-radio-input">
+                    <span class="custom-radio-accepted"></span>
+                  </span>
+                  Ilona
+                </label>
+              </div>
             
-            <div class="radion-wrapper">
-              <input class="radio-input visually-hidden" type="radio" name="teacher" id="volodymyr" value="volodymyr">
-              <label class="radio-label" for="volodymyr">
-                <span class="custom-radio-input">
-                  <span class="custom-radio-accepted"></span>
-                </span>
-                Volodymyr
-              </label>
+              <div class="radio-wrapper">
+                <input class="radio-input visually-hidden" type="radio" name="teacher" id="volodymyr" value="volodymyr">
+                <label class="radio-label" for="volodymyr">
+                  <span class="custom-radio-input">
+                    <span class="custom-radio-accepted"></span>
+                  </span>
+                  Volodymyr
+                </label>
+              </div>
             </div>
-
             
           </div>
 
@@ -390,6 +423,9 @@
             <label class="radio-lesson-tipe" for="individual">Individual</label>
           </div>
           <button class="radio-teachers-accept-button" type="submit">Send</button>
+          <p class="form-privacy-text">
+            By clicking on “Send” button, you agree to our <a href="" class="privacy-link">Privacy Policy</a>, <br class="text-format">and allow Promodo to use this information for marketing purposes.
+          </p>
         </form>
         </div>
       </section>
@@ -399,30 +435,30 @@
       <section class="reviews-section" id="reviews">
         <div class="container">
           <h2 class="section-title">What our <span class="deco-title">students</span> say</h2>
-          <p class="section-text">Hear from our students about their learning journey with us, as they share their experiences, progress, and the transformative impact </p>
+          <p class="section-text">Hear from our students about their learning journey with us, as they share <br class="text-format">their experiences, progress, and the transformative impact </p>
         
           <div class="splide">
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
                   <div class="swiper-slide reviews-wrapper">
-              <div class="reviewer-container">
-            <img 
-              class="reviewer-img" 
-              srcset="
-                ./img/reviews/img5.png 1x,
-                ./img/reviews/img5.png 2x
-              "
-              src="./img/reviews/img5.png"
-              alt="Reviewer photo">
-              <div class="reviewer-info">
-                <p class="reviewer-name">Anna</p>
-                <p class="reviewer-job">Student</p>
-              </div>
-              </div>
-              <p class="review">
-                My experience at the language school has been nothing short of amazing. The teachers are dedicated and the learning environment is stimulating. I feel more confident in my English skills.
-              </p>
+                    <div class="reviewer-container">
+                      <img 
+                      class="reviewer-img" 
+                      srcset="
+                        ./img/reviews/img5.png 1x,
+                        ./img/reviews/img5.png 2x
+                      "
+                      src="./img/reviews/img5.png"
+                      alt="Reviewer photo">
+                      <div class="reviewer-info">
+                        <p class="reviewer-name">Anna</p>
+                        <p class="reviewer-job">Student</p>
+                      </div>
+                    </div>
+                    <p class="review">
+                      My experience at the language school has been nothing short       of amazing. The teachers are dedicated and the learning       environment is stimulating. I feel more confident in my       English skills.
+                    </p>
                   </div>
                 </li>
                 <li class="splide__slide">
@@ -469,9 +505,9 @@
                 </li>
               </ul>
             </div>
-            <div class="my-slider-progress">
+            <!-- <div class="my-slider-progress">
               <div class="my-slider-progress-bar"></div>
-            </div>
+            </div> -->
           </div>
         </div>
       </section>  
@@ -547,10 +583,14 @@
     
     <footer>
       <div class="container">
-        <a class="logo" href="./index.html"
+
+        <div class="footer-before-hr">
+
+        <div class="footer-address-wrapper">
+          <a class="logo" href="./index.html"
           >english<span class="logo-accent">excellence</span>.</a
-        >
-        <address class="footer-address">
+          >
+          <address class="footer-address">
           <ul class="address-list">
             <li class="address-item">
               <h3 class="address-subtitle">Phone number:</h3>
@@ -564,7 +604,9 @@
               rel="noopener noreferrer">32a M. Bazhana ave</a>
             </li>
           </ul>
-        </address>
+          </address>
+        </div>
+
         <nav class="footer-nav">
           <ul class="footer-nav-list">
             <li class="footer-nav-item">
@@ -622,8 +664,12 @@
             </a>
         </li>
         </ul>
+
+        </div>
         
         <hr class="footer-line">
+
+        <div class="footer-after-hr">
         
         <p class="copyright">&copy;2023  English Excellence. All rights reserved.</p>
         <ul class="policy-list">
@@ -634,6 +680,8 @@
             <a class="policy-item-link" href="#">Terms of Service</a>
           </li>
         </ul>
+
+        </div>
         
       </div>
     </footer>

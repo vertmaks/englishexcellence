@@ -58,9 +58,33 @@ section {
   padding: 40px 0;
 }
 
+@media only screen and (min-width: 768px) {
+  section {
+    padding: 50px 0;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  section {
+    padding: 48px 0;
+  }
+}
+
 .container {
   max-width: 335px;
   margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 704px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container {
+    max-width: 1024px;
+  }
 }
 
 .visually-hidden {
@@ -85,6 +109,13 @@ section {
   text-align: center;
 }
 
+@media only screen and (min-width: 768px) {
+  .section-title {
+    font-size: 40px;
+    line-height: 120%;
+  }
+}
+
 .section-text {
   font-weight: 400;
   font-size: 14px;
@@ -96,6 +127,8 @@ section {
 
 @media only screen and (min-width: 768px) {
   .section-text {
+    font-size: 18px;
+    line-height: 167%;
     margin-bottom: 64px;
   }
 }
@@ -116,6 +149,14 @@ section {
   background-color: #bee8cc;
 }
 
+@media only screen and (min-width: 768px) {
+  .deco-title::after {
+    height: 16px;
+    bottom: 0;
+  }
+  
+}
+
 .heading-accent {
   color: #bee8cc;
 }
@@ -128,6 +169,13 @@ header .container {
   align-items: center;
   max-width: 375px;
   padding: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  header .container {
+    max-width: 768px;
+    padding: 20.5px 32px;
+  }
 }
 
 .logo-accent {
@@ -145,11 +193,21 @@ header .container {
 .mob-menu-icon {
   stroke: #121417;
 }
+
+@media only screen and (min-width: 1280px) {
+  
+}
 /* #endregion */
 
 /* #region Hero */
 .hero-section {
   padding: 8px 20px 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-section {
+    padding: 32px 32px 50px;
+  }
 }
 
 .hero-section .container {
@@ -182,11 +240,75 @@ header .container {
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .hero-bg {
+    padding: 260px 32px 32px;
+    border-radius: 30px;
+    background-image: linear-gradient(
+        57deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.1) 100%
+      ),
+      url('../img/hero/block-tab.jpg');
+  }
+}
+
+@media only screen and (min-width: 768px) and (min-resolution: 192dpi) {
+  .hero-bg {
+    background-image: linear-gradient(
+        57deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.1) 100%
+      ),
+      url('../img/hero/block-tab@2x.jpg');
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .hero-bg {
+    padding: 164px 32px 32px 64px;
+    border-radius: 0;
+    background-image: linear-gradient(
+        57deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.1) 100%
+      ),
+      url('../img/hero/block-desk.jpg');
+  }
+}
+
+@media only screen and (min-width: 1280px) and (min-resolution: 192dpi) {
+  .hero-bg {
+    background-image: linear-gradient(
+        57deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.1) 100%
+      ),
+      url('../img/hero/block-desk@2x.jpg');
+  }
+}
+
 .hero-title {
   font-size: 38px;
   line-height: 105%;
   color: #fff;
-  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-title {
+    font-size: 60px;
+    line-height: 117%;
+    margin-bottom: 32px;
+    max-width: 488px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .hero-title {
+    max-width: 564px;
+  }
+  
 }
 
 .order-btn {
@@ -207,6 +329,18 @@ header .container {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media only screen and (min-width: 768px) {
+  .order-btn {
+    min-width: 306px;
+    font-size: 18px;
+    line-height: 156%;
+    text-align: center;
+    padding: 16px;
+    margin: 0 0 215px;
+  }
+  
+}
+
 .order-btn:hover,
 .order-btn:focus {
   background-color: #38ae5f;
@@ -222,6 +356,14 @@ header .container {
   background-color: #fff;
   margin-left: auto;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media only screen and (min-width: 768px) {
+  .scroll-down {
+    width: 48px;
+    height: 48px;
+  }
+  
 }
 
 .arrow-icon {
@@ -242,6 +384,10 @@ header .container {
 /* #endregion */
 
 /* #region About */
+.text-format {
+  display: none;
+}
+
 .about-item {
   position: relative;
   line-height: 120%;
@@ -251,6 +397,24 @@ header .container {
   border-radius: 16px;
   background-color: #f3f5f6;
   counter-increment: list-counter;
+}
+
+@media only screen and (min-width: 768px) {
+  .text-format {
+    display: inline;
+  }
+
+  .about-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-bottom: 32px;
+  }
+
+  .about-item {
+    max-width: 336px;
+    margin-bottom: 0;
+  }
 }
 
 .about-item::before {
@@ -273,9 +437,18 @@ header .container {
   height: 313px;
   background-color: #4dc274;
 }
+
+@media only screen and (min-width: 768px) {
+  .about-img-wrapper {
+    width: 704px;
+    height: 243px;
+  }
+  
+}
 /* #endregion */
 
 /* #region Lessons */
+
 .lessons-card-item {
   border: 1px solid #4dc274;
   border-radius: 16px;
@@ -287,7 +460,7 @@ header .container {
   margin-bottom: 20px;
 }
 
-.lessons-card-item.accent-card {
+.lessons-card-item:nth-child(even) {
   border: none;
   background-color: #4dc274;
 }
@@ -300,9 +473,8 @@ header .container {
   text-align: center;
 }
 
-.lessons-card-item.accent-card .lessons-card-title,
-.lessons-card-item.accent-card .card-price,
-.lessons-card-item.accent-card .card-text {
+.lessons-card-item:nth-child(even) .lessons-card-title,
+.lessons-card-item:nth-child(even) .card-price {
   color: #fff;
 }
 
@@ -342,19 +514,24 @@ header .container {
   color: rgba(18, 20, 23, 0.5);
 }
 
+.lessons-card-item:nth-child(even) .card-text {
+  color: rgba(255, 255, 255, 0.7);
+}
+
 .lessons-card-button {
   display: block;
   border-radius: 12px;
   border: none;
-  width: 295px;
-  height: 52px;
+  min-width: 295px;
+  height: auto;
 
   font-weight: 700;
   font-size: 14px;
   line-height: 171%;
   color: #fff;
   margin-top: 20px;
-  padding: 14px 78px;
+  padding: 14px;
+  text-align: center;
   background-color: #4dc274;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: color, background-color;
@@ -363,6 +540,42 @@ header .container {
 .lessons-card-button:hover,
 .lessons-card-button:focus {
   background-color: #38ae5f;
+}
+
+@media only screen and (min-width: 768px) {
+  .lessons-card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+  .lessons-card-item {
+    width: 336px;
+    padding: 32px 16px;
+  }
+
+  .lessons-card-item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .card-price {
+    line-height: 137%;
+  }
+
+  .card-text {
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  .lessons-card-button {
+    font-size: 18px;
+    line-height: 156%;
+    padding: 16px;
+    text-align: center;
+    height: auto;
+    min-width: 304px;
+    margin-top: 32px;
+  }
 }
 
 /* #endregion */
@@ -392,6 +605,10 @@ header .container {
   border-radius: 16px;
   padding: 40px 20px;
   z-index: 1;
+}
+
+.accent-books-img {
+  display: none;
 }
 
 .accent-list-deco1 {
@@ -470,7 +687,8 @@ header .container {
   color: #fff;
   margin: 0 auto;
   margin-top: 20px;
-  padding: 14px 58px;
+  padding: 14px;
+  text-align: center;
   border-radius: 12px;
   border: none;
   background-color: #4dc274;
@@ -480,6 +698,61 @@ header .container {
 .accent-button:hover,
 .accent-button:focus {
   background-color: #38ae5f;
+}
+
+@media only screen and (min-width: 768px) {
+  .accent-section .container {
+    padding: 64px 18px 93px;
+  }
+
+  .accent-section .section-title {
+    font-size: 60px;
+    line-height: 117%;
+    margin: 0 14px 83px;
+  }
+
+  .accent-list-wrapper {
+    position: relative;
+    padding:65px 185px 63px 32px;
+  }
+
+  .accent-books-img {
+    display: block;
+    position: absolute;
+    top: 174px;
+    left: 503px;
+  }
+
+  .accent-list-subtitle {
+    font-size: 40px;
+  }
+
+  .accent-item {
+    font-size: 20px;
+    line-height: 120%;
+  }
+
+  .accent-icon-wrapper{
+    width: 28px;
+    height: 28px;
+    margin-right: 16px;
+  }
+
+  .accent-icon {
+    width: 13px;
+    height: 9px;
+  }
+
+  .accent-button {
+    font-size: 18px;
+    line-height: 156%;
+    padding: 16px;
+    margin: 0;
+    margin-top: 32px;
+    text-align: center;
+    width: 306px;
+  }
+  
 }
 /* #endregion */
 
@@ -510,6 +783,38 @@ header .container {
   font-size: 14px;
   line-height: 171%;
   color: rgba(18, 20, 23, 0.5);
+}
+
+@media only screen and (min-width: 768px) {
+  .teacher-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .teacher-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 272px;
+  }
+
+  .teacher-item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .teacher-img {
+  }
+
+  .teacher-name {
+  }
+
+  .teacher-descr {
+    font-size: 16px;
+    line-height: 150%;
+  }
+  
 }
 /* #endregion */
 
@@ -560,8 +865,6 @@ header .container {
   line-height: 129%;
   color: #121417;
 }
-
-
 
 .radio-teachers-subtitle {
   font-weight: 600;
@@ -623,7 +926,7 @@ header .container {
 
   border: none;
   border-radius: 12px;
-  padding: 14px 14px;
+  padding: 14px;
   min-width: 335px;
   height: 52px;
   background-color: #4dc274;
@@ -676,6 +979,96 @@ header .container {
 .radio-lesson-tipe:not(:last-child) {
   margin-right: 18px;
 }
+
+.form-privacy-text {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .form-wrapper {
+    max-width: 500px;
+  }
+
+  .main-form-input {
+    font-size: 16px;
+    line-height: 150%;
+    height: 56px;
+    margin-bottom: 18px;
+  }
+
+  .main-form-comment {
+    margin-bottom: 32px;
+  }
+
+  .main-form-input::placeholder,
+  .main-form-comment::placeholder {
+    font-size: 16px;
+    line-height: 150%
+  }
+
+  .radio-teachers-subtitle {
+    font-size: 18px;
+    line-height: 133%;
+    margin-bottom: 16px;
+  }
+
+  .teacher-radio-main-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .radio-wrapper:not(:last-child) {
+    margin: 0;
+    margin-right: 16px;
+  }
+
+  .radio-label {
+    font-size: 18px;
+    line-height: 133%;
+  }
+
+  .custom-radio-input {
+    width: 24px;
+    height: 24px;
+  }
+
+  .custom-radio-accepted {
+    width: 12px;
+    height: 12px;
+  }
+
+  .radio-teachers-accept-button {
+    min-width: 500px;
+    height: 64px;
+    font-size: 18px;
+    line-height: 156%;
+    padding: 16px;
+    margin-top: 32px;
+  }
+
+  .radio-lesson-tipe {
+    font-size: 18px;
+    line-height: 133%;
+  }
+
+  .radio-lesson-tipe:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  .form-privacy-text {
+    display: inline;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    color: rgba(18, 20, 23, 0.5);
+    margin-top: 16px;
+  }
+
+  .privacy-link {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+  }
+}
 /* #endregion */
 
 /* #region Reviews */
@@ -725,6 +1118,36 @@ header .container {
   line-height: 171%;
   color: rgba(18, 20, 23, 0.5);
   margin: 0 14px;
+}
+
+.reviewer-img {
+  width: 50px;
+  height: 50px;
+}
+
+@media only screen and (min-width: 768px) {
+  .reviews-wrapper {
+    width: 336px;
+    height: 326px;
+    border-radius: 30px;
+    padding: 32px 16px;
+  }
+
+  .reviewer-container {
+    padding: 14px 16px;
+    margin-bottom: 32px;
+    width: 304px;
+  }
+
+  .reviews-list {
+    display: flex;
+    gap: 32px;
+  }
+
+  .review {
+    font-size: 16px;
+    line-height: 150%;
+  }
 }
 
 /* #endregion */
@@ -836,6 +1259,9 @@ footer .logo {
   line-height: 129%;
   letter-spacing: -0.02em;
   color: rgba(255, 255, 255, 0.6);
+}
+
+.policy-item:not(:last-child) {
   margin-right: 18px;
 }
 
@@ -855,6 +1281,38 @@ footer .logo {
   width: 100%;
 }
 
+@media only screen and (min-width: 768px) {
+  footer {
+    padding: 32px 32px 16px;
+  }
+
+  .footer-before-hr {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .footer-address-wrapper {
+    margin-right: 152px;
+  }
+
+  .footer-nav {
+    margin-right: 131px;
+  }
+
+  .footer-after-hr {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .copyright {
+    margin: 0;
+  }
+
+  .policy-list {
+    margin-top: -5px;
+  }
+}
 /* #endregion */
 
 /* #region Burger menu mob */
@@ -979,6 +1437,15 @@ body.no-scroll {
   fill: #121417; 
 }
 
+@media only screen and (min-width: 768px) {
+  .mobmenu-container {
+    height: 100vh;
+    min-width: 384px;
+    max-width: 50vw;
+    padding-top: 337px;
+  }
+  
+}
 /* #endregion */
 
 /* Splide library */
@@ -992,4 +1459,9 @@ body.no-scroll {
   height: 2px;
   transition: width 400ms ease;
   width: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .splide__list {
+  }
 }
