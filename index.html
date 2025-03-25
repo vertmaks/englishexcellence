@@ -32,11 +32,8 @@
       rel="stylesheet"
     />
 
-    <!-- Swiper library -->
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    <!-- Splide library -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
@@ -404,8 +401,11 @@
           <h2 class="section-title">What our <span class="deco-title">students</span> say</h2>
           <p class="section-text">Hear from our students about their learning journey with us, as they share their experiences, progress, and the transformative impact </p>
         
-          <div class="swiper">
-            <div class="swiper-slide reviews-wrapper">
+          <div class="splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <div class="swiper-slide reviews-wrapper">
               <div class="reviewer-container">
             <img 
               class="reviewer-img" 
@@ -423,8 +423,10 @@
               <p class="review">
                 My experience at the language school has been nothing short of amazing. The teachers are dedicated and the learning environment is stimulating. I feel more confident in my English skills.
               </p>
-            </div>
-            <div class="swiper-slide reviews-wrapper">
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="swiper-slide reviews-wrapper">
               <div class="reviewer-container">
             <img 
               class="reviewer-img" 
@@ -442,8 +444,10 @@
               <p class="review">
                 The school offers a great balance of language theory and practical exercises. The personalized feedback from the teachers has helped me improve my weak areas.
               </p>
-            </div>
-            <div class="swiper-slide reviews-wrapper">
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="swiper-slide reviews-wrapper">
               <div class="reviewer-container">
             <img 
               class="reviewer-img" 
@@ -461,6 +465,12 @@
               <p class="review">
                 I love the dynamic and interactive teaching methods used here. It's a great place to learn English in a fun and effective way. I have definitely seen a big improvement in my language skills.
               </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="my-slider-progress">
+              <div class="my-slider-progress-bar"></div>
             </div>
           </div>
         </div>
@@ -628,7 +638,7 @@
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script type="module" src="./js/index.js"></script>
   </body>
 </html>

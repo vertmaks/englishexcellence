@@ -92,18 +92,25 @@ applicationForm.addEventListener("submit", formSubmit);
 
 // Swiper
 
-document.addEventListener('DOMContentLoaded', function () {
-    const swiper = new Swiper(".swiper", {
-        direction: 'horizontal',
-        loop: true,
-        slidesPerView: 1,
-        spaceBetween: 20,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: true,
-        },
-        grabCursor: true,
-        touchRatio: 1,
-        simulateTouch: true,
-    });
-});
+const splide = new Splide( '.splide', {
+  type       : 'loop',
+//   speed      : 400,
+  heightRatio: 0.9,
+  gap: 20,
+  drag: true,
+  pagination : false,
+  arrows     : false,
+  autoplay   : true,
+  interval   : 5000,
+  pauseOnHover: true,
+} );
+const bar    = splide.root.querySelector( '.my-slider-progress-bar' );
+
+// Updates the bar width whenever the carousel moves:
+splide.on( 'mounted move', function () {
+  const end  = splide.Components.Controller.getEnd() + 1;
+  const rate = Math.min( ( splide.index + 1 ) / end, 1 );
+  bar.style.width = String( 100 * rate ) + '%';
+} );
+
+splide.mount();
