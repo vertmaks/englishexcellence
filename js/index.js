@@ -71,9 +71,20 @@ function formSubmit (event) {
     const isNameValid = nameCheck();
     const isEmailValid = emailCheck();
 
+    if (!isNameValid) {
+        triggerShake(nameEmptyError);
+    };
+    if (!isEmailValid) {
+        if (emailInput.value === "") {
+            triggerShake(emailEmptyError);
+        } else {
+            triggerShake(emailErrorMsg);
+        };
+    };
+
     if (!isNameValid || !isEmailValid) {
         return;
-    }
+    };
 
     const userData = { name, email, phone, comment, teacher, lesson };
 
@@ -92,14 +103,21 @@ function nameCheck() {
         nameInput.style.borderColor = "tomato";
         nameEmptyError.classList.remove("visually-hidden");
         nameEmptyError.classList.add("is-onscreen");
+
+        setTimeout(() => {
+            nameInput.style.borderColor = "";
+            nameEmptyError.classList.remove("is-onscreen");
+        }, 5000);
+
         return false;
     } else {
         nameInput.style.borderColor = "";
         nameEmptyError.classList.remove("is-onscreen");
         nameEmptyError.classList.add("visually-hidden");
+
         return true;
-    }    
-}
+    };
+};
 
 function emailCheck() {
     if (emailInput.value === "") {
@@ -107,24 +125,52 @@ function emailCheck() {
         emailEmptyError.classList.remove("visually-hidden");
         emailEmptyError.classList.add("is-onscreen");
         emailErrorMsg.classList.remove("is-onscreen");
+
+        setTimeout(() => {
+            emailInput.style.borderColor = "";
+            emailEmptyError.classList.remove("is-onscreen");
+            emailEmptyError.classList.add("visually-hidden");
+        }, 5000);
+
         return false;
     } else if (!emailInput.value.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/)) {
         emailInput.style.borderColor = "tomato";
         emailErrorMsg.classList.remove("visually-hidden");
         emailErrorMsg.classList.add("is-onscreen");
         emailEmptyError.classList.remove("is-onscreen");
+
         return false;
     } else {
         emailInput.style.borderColor = "";
         emailErrorMsg.classList.remove("is-onscreen");
         emailEmptyError.classList.remove("is-onscreen");
-        return true;
-    }
 
-}
+        return true;
+    };
+};
+
+function triggerShake(el) {
+    el.classList.add("shake");
+    setTimeout(() => {
+        el.classList.remove("shake");
+    }, 300);
+};
 
 nameInput.addEventListener("blur", nameCheck);
+nameInput.addEventListener("focus", () => {
+    nameInput.style.borderColor = "";
+    nameEmptyError.classList.remove("is-onscreen");
+    nameEmptyError.classList.add("visually-hidden");
+});
+
 emailInput.addEventListener("blur", emailCheck);
+emailInput.addEventListener("focus", () => {
+    emailInput.style.borderColor = "";
+    emailEmptyError.classList.remove("is-onscreen");
+    emailErrorMsg.classList.remove("is-onscreen");
+    emailEmptyError.classList.add("visually-hidden");
+    emailErrorMsg.classList.add("visually-hidden");
+});
 
 mobMenuOpenBtn.addEventListener("click", toogleMenu);
 mobMenuCloseBtn.addEventListener("click", toogleMenu);
