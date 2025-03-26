@@ -165,11 +165,13 @@ nameInput.addEventListener("focus", () => {
 
 emailInput.addEventListener("blur", emailCheck);
 emailInput.addEventListener("focus", () => {
-    emailInput.style.borderColor = "";
-    emailEmptyError.classList.remove("is-onscreen");
-    emailErrorMsg.classList.remove("is-onscreen");
-    emailEmptyError.classList.add("visually-hidden");
-    emailErrorMsg.classList.add("visually-hidden");
+    if (emailInput.value === "") {
+        emailInput.style.borderColor = "";
+        emailEmptyError.classList.remove("is-onscreen");
+        emailErrorMsg.classList.remove("is-onscreen");
+        emailEmptyError.classList.add("visually-hidden");
+        emailErrorMsg.classList.add("visually-hidden");
+    }
 });
 
 mobMenuOpenBtn.addEventListener("click", toogleMenu);
