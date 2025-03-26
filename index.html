@@ -139,7 +139,7 @@
           </h2>
           <p class="section-text">
             We are dedicated to providing engaging and effective English
-            language courses <br class="text-format"> in a supportive and stimulating learning
+            language courses in a supportive and stimulating learning
             environment
           </p>
           <div class="about-content-wrapper">
@@ -170,7 +170,7 @@
           </h2>
           <p class="section-text">
             Our lessons are carefully structured and interactive, designed to
-            promote rapid <br class="text-format-desk">language acquisition through practical tasks and
+            promote rapid language acquisition through practical tasks and
             real-world scenarios
           </p>
           <ul class="lessons-card-list">
@@ -270,7 +270,7 @@
                   </svg>
                 </div>
                 Experience the satisfaction of real progress as your language
-                skills and confidence <br class="text-format">grow with every session.
+                skills and confidence grow with every session.
               </li>
             </ul>
             <a class="accent-button" href="#contact-form">
@@ -376,37 +376,65 @@
       <section class="contact" id="contact-form">
         <div class="container">
           <h2 class="section-title">Leave an <span class="deco-title">application</span></h2>
-          <p class="section-text">Please use the form below to contact us. Enter your name, email, and <br class="text-format">message and we'll get back to you shortly.</p>
+          <p class="section-text">Please use the form below to contact us. Enter your name, email, and message and we'll get back to you shortly.</p>
         </div>
-        <div class="form-wrapper">
+        <div class="form-section-content-wrapper">
+          <div class="form-img-wrapper">
+            <img 
+              class="form-img" 
+              srcset="
+                ./img/form/img-desk.png 1x,
+                ./img/form/img-desk@2x.png 2x
+              "
+              src="./img/form/img-desk.png" 
+              alt="Girl with headphones and laptop"
+              width="492"
+              height="392"
+            >
+            <p class="form-img-heading">1000</p>
+            <p class="form-img-text">of our online English language lessons! This journey has been full of discovery, growth and unforgettable moments, and we are happy to share this joyful event with you.
+            </p>
+          </div>
+          <div class="form-wrapper">
         <form class="main-form" name="applicationForm">
           <input 
-            class="main-form-input"
+            class="main-form-input name-input"
             type="text"
             name="userName"
+            id="userName"
             placeholder="Name"
             required
+            autocomplete="off"
           >
+          <div class="required-marker1">required</div>
+          <span class="form-name-error-empty visually-hidden">This field is required</span>
           <input
-            class="main-form-input" 
+            class="main-form-input email-input" 
             type="email"
             name="userEmail"
+            id="userEmail"
             placeholder="Email"
             required
+            autocomplete="off"
           >
+          <span class="required-marker2">required</span>
+          <span class="form-email-error-msg visually-hidden">Please, enter correct email</span>
+          <span class="form-email-error-empty visually-hidden">This field is required</span>
           <input
-            class="main-form-input"
+            class="main-form-input phone-input"
             type="tel"
             name="userPhone"
             placeholder="Phone"
+            autocomplete="off"
           >
+          <div class="required-marker3">optional</div>
           <textarea
-            class="main-form-comment" 
+            class="main-form-comment comment-area" 
             type="text"
             name="userComment"
-            rows="3"
+            rows="4"
             placeholder="Comment"></textarea>
-
+            <div class="required-marker4">optional</div>
           <div class="radion-teachers">
             <h3 class="radio-teachers-subtitle">Choose a teacher</h3>
 
@@ -466,9 +494,10 @@
           </div>
           <button class="radio-teachers-accept-button" type="submit">Send</button>
           <p class="form-privacy-text">
-            By clicking on “Send” button, you agree to our <a href="" class="privacy-link">Privacy Policy</a>, <br class="text-format">and allow Promodo to use this information for marketing purposes.
+            By clicking on “Send” button, you agree to our <a href="" class="privacy-link">Privacy Policy</a>, and allow Promodo to use this information for marketing purposes.
           </p>
         </form>
+          </div>
         </div>
       </section>
 
@@ -477,7 +506,7 @@
       <section class="reviews-section" id="reviews">
         <div class="container">
           <h2 class="section-title">What our <span class="deco-title">students</span> say</h2>
-          <p class="section-text">Hear from our students about their learning journey with us, as they share <br class="text-format">their experiences, progress, and the transformative impact </p>
+          <p class="section-text">Hear from our students about their learning journey with us, as they share their experiences, progress, and the transformative impact </p>
         
           <div class="splide">
             <div class="splide__track">

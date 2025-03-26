@@ -82,6 +82,46 @@ function formSubmit (event) {
     form.reset();
 };
 
+const emailInput = document.getElementById("userEmail");
+const emailErrorMsg = document.querySelector(".form-email-error-msg");
+const emailEmptyError = document.querySelector(".form-email-error-empty");
+const nameInput = document.getElementById("userName");
+const nameEmptyError = document.querySelector(".form-name-error-empty");
+
+function nameCheck() {
+    if (nameInput.value === "") {
+        nameInput.style.borderColor = "tomato";
+        nameEmptyError.classList.remove("visually-hidden");
+        nameEmptyError.classList.add("is-onscreen");
+    } else {
+        nameInput.style.borderColor = "";
+        nameEmptyError.classList.remove("is-onscreen");
+        nameEmptyError.classList.add("visually-hidden");
+    }    
+}
+
+function emailCheck() {
+    if (emailInput.value === "") {
+        emailInput.style.borderColor = "tomato";
+        emailEmptyError.classList.remove("visually-hidden");
+        emailEmptyError.classList.add("is-onscreen");
+        emailErrorMsg.classList.remove("is-onscreen");
+    } else if (!emailInput.value.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/)) {
+        emailInput.style.borderColor = "tomato";
+        emailErrorMsg.classList.remove("visually-hidden");
+        emailErrorMsg.classList.add("is-onscreen");
+        emailEmptyError.classList.remove("is-onscreen");
+    } else {
+        emailInput.style.borderColor = "";
+        emailErrorMsg.classList.remove("is-onscreen");
+        emailEmptyError.classList.remove("is-onscreen");
+    }
+
+}
+
+nameInput.addEventListener("blur", nameCheck);
+emailInput.addEventListener("blur", emailCheck);
+
 mobMenuOpenBtn.addEventListener("click", toogleMenu);
 mobMenuCloseBtn.addEventListener("click", toogleMenu);
 mobMenuNav.addEventListener("click", navClickReaction);
@@ -89,6 +129,8 @@ mobMenuNav.addEventListener("click", navClickReaction);
 lessonBtns.addEventListener("click", lessonsOptions);
 
 applicationForm.addEventListener("submit", formSubmit);
+
+
 
 // Swiper
 
