@@ -88,7 +88,7 @@ const nameInput = document.getElementById("userName");
 const nameEmptyError = document.querySelector(".form-name-error-empty");
 
 function nameCheck() {
-    if (nameInput.value === "") {
+    if (nameInput.value.trim() === "") {
         nameInput.style.borderColor = "tomato";
         nameEmptyError.classList.remove("visually-hidden");
         nameEmptyError.classList.add("is-onscreen");

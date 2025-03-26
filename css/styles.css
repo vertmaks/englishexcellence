@@ -593,6 +593,8 @@ header .container {
 .lessons-card-item {
   border: 1px solid #4dc274;
   border-radius: 16px;
+  height: 100%;
+  min-height: 404px;
   padding: 40px 20px;
   background-color: #fff;
 }
@@ -1453,7 +1455,7 @@ header .container {
     display: block;
     border-radius: 30px;
     width: 492px;
-    height: 578px;
+    height: 100%;
     margin-right: 32px;
     padding: 412px 20px 40px;
     overflow: hidden;
@@ -1499,7 +1501,7 @@ header .container {
   cursor: pointer;
   border-radius: 16px;
   width: 335px;
-  height: 278px;
+  min-height: 278px;
   background-color: #f3f5f6;
   padding: 20px;
 }
@@ -1550,7 +1552,7 @@ header .container {
 @media only screen and (min-width: 768px) {
   .reviews-wrapper {
     width: 336px;
-    height: 326px;
+    min-height: 326px;
     border-radius: 30px;
     padding: 32px 16px;
   }
@@ -1581,7 +1583,7 @@ header .container {
 
   .reviews-wrapper {
     width: 320px;
-    height: 326px;
+    min-height: 326px;
   }
 
   .reviewer-container {
