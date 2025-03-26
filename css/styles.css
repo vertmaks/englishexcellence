@@ -66,7 +66,7 @@ section {
 
 @media only screen and (min-width: 1280px) {
   section {
-    padding: 48px 0;
+    padding: 75px 0;
   }
 }
 
@@ -194,8 +194,83 @@ header .container {
   stroke: #121417;
 }
 
+.header-nav-list {
+  display: none;
+}
+
+.header-social-links-list {
+  display: none;
+}
+
 @media only screen and (min-width: 1280px) {
-  
+  header {
+    margin-bottom: 16px;
+  }
+
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1280px;
+    padding: 0 128px;
+    margin: 0 auto;
+  }
+
+  .header-nav {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .header-nav .logo {
+    margin-right: 137.5px;
+  }
+
+  .header-nav-list {
+    display: inline-flex;
+    gap: 20px;
+  }
+
+  .header-nav-link {
+    display: block;
+    padding: 33px 0px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 129%;
+    color: #121417;
+  }
+
+  .header-social-links-list {
+    display: inline-flex;
+    gap: 12px;
+  }
+
+  .mob-menu-btn {
+    display: none;
+  }
+
+  .header-social-links-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(18, 20, 23, 0.1);
+    border-radius: 10px;
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
+  }
+
+  .header-icon {
+    fill: #121417;
+    width: 28px;
+    height: 28px;
+    opacity: 0.8;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .header-social-links-item:hover .header-icon,
+  .header-social-links-item:focus .header-icon {
+    fill: #4dc274; 
+  }
 }
 /* #endregion */
 
@@ -210,11 +285,20 @@ header .container {
   }
 }
 
+@media only screen and (min-width: 1280px) {
+  .hero-section {
+    padding: 16px 64px 48px;
+  }
+}
+
 .hero-section .container {
   padding: 0;
 }
 
-.hero-bg {
+
+.hero-section {
+  width: 335px;
+  margin: 0 auto;
   padding: 425px 20px 14px;
   border-radius: 16px;
   background-color: #fff;
@@ -230,7 +314,7 @@ header .container {
 }
 
 @media (min-resolution: 192dpi) {
-  .hero-bg {
+  .hero-section {
     background-image: linear-gradient(
         57deg,
         rgba(0, 0, 0, 0) 0%,
@@ -241,8 +325,10 @@ header .container {
 }
 
 @media only screen and (min-width: 768px) {
-  .hero-bg {
+  .hero-section {
+    width: 704px;
     padding: 260px 32px 32px;
+    margin: 0 auto;
     border-radius: 30px;
     background-image: linear-gradient(
         57deg,
@@ -254,7 +340,7 @@ header .container {
 }
 
 @media only screen and (min-width: 768px) and (min-resolution: 192dpi) {
-  .hero-bg {
+  .hero-section {
     background-image: linear-gradient(
         57deg,
         rgba(0, 0, 0, 0) 0%,
@@ -265,7 +351,9 @@ header .container {
 }
 
 @media only screen and (min-width: 1280px) {
-  .hero-bg {
+  .hero-section {
+    width: 1152px;
+    margin: 0 auto;
     padding: 164px 32px 32px 64px;
     border-radius: 0;
     background-image: linear-gradient(
@@ -278,7 +366,7 @@ header .container {
 }
 
 @media only screen and (min-width: 1280px) and (min-resolution: 192dpi) {
-  .hero-bg {
+  .hero-section {
     background-image: linear-gradient(
         57deg,
         rgba(0, 0, 0, 0) 0%,
@@ -438,12 +526,48 @@ header .container {
   background-color: #4dc274;
 }
 
+.text-format-desk {
+  display: none;
+}
+
 @media only screen and (min-width: 768px) {
   .about-img-wrapper {
     width: 704px;
     height: 243px;
   }
-  
+}
+
+@media only screen and (min-width: 1280px) {
+  .about-section {
+    padding-top: 96px;
+  }
+
+  .about-content-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .about-item {
+    margin-bottom: 0;
+    border-radius: 30px;
+    width: 325px;
+  }
+
+  .about-list {
+    margin-bottom: 0;
+    max-width: 682px;
+    margin-right: 32px;
+  }
+
+  .about-img-wrapper {
+    border-radius: 30px;
+    width: 310px;
+    height: 352px;
+  }
+
+  .text-format-desk {
+    display: inline;
+  }
 }
 /* #endregion */
 
@@ -576,6 +700,10 @@ header .container {
     min-width: 304px;
     margin-top: 32px;
   }
+}
+
+@media only screen and (min-width: 1280px) {
+  
 }
 
 /* #endregion */
@@ -1223,7 +1351,9 @@ footer .logo {
 }
 
 .social-links-item {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   padding: 8px;
