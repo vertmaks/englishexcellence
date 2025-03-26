@@ -59,24 +59,23 @@ function formSubmit (event) {
     event.preventDefault();
     
     const form = event.target;
-    const name = form.elements.userName.value;
-    const email = form.elements.userEmail.value;
-    const phone = form.elements.userPhone.value;
-    const comment = form.elements.userComment.value;
+    const name = form.elements.userName.value.trim();
+    const email = form.elements.userEmail.value.trim();
+    const phone = form.elements.userPhone.value.trim();
+    const comment = form.elements.userComment.value.trim();
     const selectedTeacher = document.querySelector('input[name="teacher"]:checked');
-    const teacher = selectedTeacher.value;
+    const teacher = selectedTeacher? selectedTeacher.value : null;
     const selectedLesson = document.querySelector('input[name="lessons"]:checked');
-    const lesson = selectedLesson.value;
-    const userData = { name, email, phone, comment, teacher, lesson };
+    const lesson = selectedLesson ? selectedLesson.value : null;
 
-    if (name.trim() === '' || email.trim() === '') {
-        return alert("Please, enter your name and email");
+    const isNameValid = nameCheck();
+    const isEmailValid = emailCheck();
+
+    if (!isNameValid || !isEmailValid) {
+        return;
     }
 
-    userData.name = name.trim();
-    userData.email = email.trim();
-    userData.phone = phone.trim();
-    userData.comment = comment.trim();
+    const userData = { name, email, phone, comment, teacher, lesson };
 
     console.log(userData);
     form.reset();
@@ -93,10 +92,12 @@ function nameCheck() {
         nameInput.style.borderColor = "tomato";
         nameEmptyError.classList.remove("visually-hidden");
         nameEmptyError.classList.add("is-onscreen");
+        return false;
     } else {
         nameInput.style.borderColor = "";
         nameEmptyError.classList.remove("is-onscreen");
         nameEmptyError.classList.add("visually-hidden");
+        return true;
     }    
 }
 
@@ -106,15 +107,18 @@ function emailCheck() {
         emailEmptyError.classList.remove("visually-hidden");
         emailEmptyError.classList.add("is-onscreen");
         emailErrorMsg.classList.remove("is-onscreen");
+        return false;
     } else if (!emailInput.value.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/)) {
         emailInput.style.borderColor = "tomato";
         emailErrorMsg.classList.remove("visually-hidden");
         emailErrorMsg.classList.add("is-onscreen");
         emailEmptyError.classList.remove("is-onscreen");
+        return false;
     } else {
         emailInput.style.borderColor = "";
         emailErrorMsg.classList.remove("is-onscreen");
         emailEmptyError.classList.remove("is-onscreen");
+        return true;
     }
 
 }
