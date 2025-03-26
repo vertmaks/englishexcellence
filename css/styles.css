@@ -1734,6 +1734,11 @@ footer .logo {
   visibility: visible;
 }
 
+@media only screen and (min-width: 1280px) {
+  .burger-menu-bg {
+    display: none;
+  } 
+}
 /* ↓ cancel scroll if menu is open ↓ */
 
 body.no-scroll {
