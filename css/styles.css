@@ -1073,6 +1073,7 @@ header .container {
   margin-bottom: 20px;
 }
 
+
 .required-marker1,
 .required-marker2,
 .required-marker3,
@@ -1081,7 +1082,7 @@ header .container {
 .form-email-error-empty,
 .form-name-error-empty {
   position: absolute;
-  top: -7px;
+  top: -6px;
   right: 25px;
   background-color: #fff;
   color: rgba(18, 20, 23, 0.1);
@@ -1089,7 +1090,7 @@ header .container {
   
   opacity: 0;
   transform: scale(0);
-
+  
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: opacity, color, transform;
 }
@@ -1097,8 +1098,7 @@ header .container {
 .form-email-error-msg,
 .form-email-error-empty,
 .form-name-error-empty {
-  top: 67px;
-  right: 25px;
+  top: 65px;
   color: tomato;
 }
 
@@ -1106,9 +1106,9 @@ header .container {
   top: -7px;
 }
 
+.required-marker2,
 .form-email-error-empty {
-  top: 67px;
-  right: 25px;
+  top: 65px;
 }
 
 .form-email-error-msg.is-onscreen,
@@ -1118,19 +1118,47 @@ header .container {
   transform: scale(1);
 }
 
-.required-marker2 {
-  top: 67px;
-  right: 25px;
-}
-
 .required-marker3 {
-  top: 141px;
-  right: 25px;
+  top: 134px;
 }
 
 .required-marker4 {
-  top: 215px;
-  right: 25px;
+  top: 204px;
+}
+
+@media only screen and (min-width: 768px) {
+  .required-marker1,
+  .required-marker2,
+  .required-marker3,
+  .required-marker4,
+  .form-email-error-msg,
+  .form-email-error-empty,
+  .form-name-error-empty {
+    top: -7px;
+  }
+
+  .form-email-error-msg,
+  .form-email-error-empty,
+  .form-name-error-empty {
+    top: 67px;
+  }
+
+  .form-name-error-empty {
+    top: -7px;
+  }
+
+  .required-marker2,
+  .form-email-error-empty {
+    top: 67px;
+  }
+
+  .required-marker3 {
+    top: 141px;
+  }
+  
+  .required-marker4 {
+    top: 215px;
+  }
 }
 
 @keyframes shake {

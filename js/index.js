@@ -73,6 +73,7 @@ function formSubmit (event) {
 
     if (!isNameValid) {
         triggerShake(nameEmptyError);
+        nameInput.focus();
     };
     if (!isEmailValid) {
         if (emailInput.value === "") {
@@ -80,6 +81,7 @@ function formSubmit (event) {
         } else {
             triggerShake(emailErrorMsg);
         };
+        emailInput.focus();
     };
 
     if (!isNameValid || !isEmailValid) {
@@ -153,26 +155,26 @@ function triggerShake(el) {
     el.classList.add("shake");
     setTimeout(() => {
         el.classList.remove("shake");
-    }, 300);
+    }, 350);
 };
 
 nameInput.addEventListener("blur", nameCheck);
-nameInput.addEventListener("focus", () => {
-    nameInput.style.borderColor = "";
-    nameEmptyError.classList.remove("is-onscreen");
-    nameEmptyError.classList.add("visually-hidden");
-});
+// nameInput.addEventListener("focus", () => {
+//     nameInput.style.borderColor = "";
+//     nameEmptyError.classList.remove("is-onscreen");
+//     nameEmptyError.classList.add("visually-hidden");
+// });
 
 emailInput.addEventListener("blur", emailCheck);
-emailInput.addEventListener("focus", () => {
-    if (emailInput.value === "") {
-        emailInput.style.borderColor = "";
-        emailEmptyError.classList.remove("is-onscreen");
-        emailErrorMsg.classList.remove("is-onscreen");
-        emailEmptyError.classList.add("visually-hidden");
-        emailErrorMsg.classList.add("visually-hidden");
-    }
-});
+// emailInput.addEventListener("focus", () => {
+//     if (emailInput.value === "") {
+//         emailInput.style.borderColor = "";
+//         emailEmptyError.classList.remove("is-onscreen");
+//         emailErrorMsg.classList.remove("is-onscreen");
+//         emailEmptyError.classList.add("visually-hidden");
+//         emailErrorMsg.classList.add("visually-hidden");
+//     }
+// });
 
 mobMenuOpenBtn.addEventListener("click", toogleMenu);
 mobMenuCloseBtn.addEventListener("click", toogleMenu);
@@ -184,12 +186,11 @@ applicationForm.addEventListener("submit", formSubmit);
 
 
 
-// Swiper
+// Swiper library
 
 const splide = new Splide( '.splide', {
   type: 'loop',
   mediaQuery: 'min',
-//   heightRatio: 0.9,
     gap: "32px",
   perPage: 1,
   drag: true,
@@ -201,7 +202,6 @@ const splide = new Splide( '.splide', {
   perPage: 1,
   breakpoints: {
     768: {
-        // heightRatio: 0.9,
         perPage: 2,
         autoplay: false,
     },
@@ -212,7 +212,6 @@ const splide = new Splide( '.splide', {
   },
 } );
 const bar    = splide.root.querySelector( '.my-slider-progress-bar' );
-
 
 // splide.on( 'mounted move', function () {
 //   const end  = splide.Components.Controller.getEnd() + 1;
