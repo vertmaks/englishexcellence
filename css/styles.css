@@ -154,7 +154,6 @@ section {
     height: 16px;
     bottom: 0;
   }
-  
 }
 
 .heading-accent {
@@ -290,7 +289,7 @@ header .container {
 
   .header-social-links-item:hover .header-icon,
   .header-social-links-item:focus .header-icon {
-    fill: #4dc274; 
+    fill: #4dc274;
   }
 }
 /* #endregion */
@@ -315,7 +314,6 @@ header .container {
 .hero-section .container {
   padding: 0;
 }
-
 
 .hero-section {
   width: 335px;
@@ -417,7 +415,6 @@ header .container {
   .hero-title {
     max-width: 564px;
   }
-  
 }
 
 .order-btn {
@@ -477,7 +474,6 @@ header .container {
     width: 48px;
     height: 48px;
   }
-  
 }
 
 .arrow-icon {
@@ -555,7 +551,6 @@ header .container {
 @media only screen and (min-width: 1280px) {
   .about-section {
     padding-top: 96px;
-
   }
 
   .about-section .section-text {
@@ -737,11 +732,6 @@ header .container {
     padding: 32px;
   }
 
-  .card-text {
-    /* width: 256px;
-    margin: 0 auto; */
-  }
-
   .lessons-card-button {
     min-width: 256px;
   }
@@ -791,7 +781,7 @@ header .container {
   border-radius: 16px;
   background-color: rgba(255, 255, 255, 0.5);
   transform: rotate(9deg);
-  
+
   z-index: -999;
 }
 
@@ -804,7 +794,7 @@ header .container {
   border-radius: 16px;
   background-color: #d4fde1;
   transform: rotate(-11deg);
-  
+
   z-index: -999;
 }
 
@@ -887,7 +877,7 @@ header .container {
 
   .accent-list-wrapper {
     position: relative;
-    padding:65px 185px 63px 32px;
+    padding: 65px 185px 63px 32px;
   }
 
   .accent-books-img {
@@ -907,7 +897,7 @@ header .container {
     line-height: 120%;
   }
 
-  .accent-icon-wrapper{
+  .accent-icon-wrapper {
     width: 28px;
     height: 28px;
     margin-right: 16px;
@@ -1073,7 +1063,6 @@ header .container {
   margin-bottom: 20px;
 }
 
-
 .required-marker1,
 .required-marker2,
 .required-marker3,
@@ -1087,10 +1076,10 @@ header .container {
   background-color: #fff;
   color: rgba(18, 20, 23, 0.1);
   font-size: 12px;
-  
+
   opacity: 0;
   transform: scale(0);
-  
+
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: opacity, color, transform;
 }
@@ -1155,14 +1144,15 @@ header .container {
   .required-marker3 {
     top: 141px;
   }
-  
+
   .required-marker4 {
     top: 215px;
   }
 }
 
 @keyframes shake {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   25% {
@@ -1194,7 +1184,6 @@ header .container {
   outline: none;
   border-color: #4dc274;
 }
-
 
 .main-form-input::placeholder,
 .main-form-comment::placeholder {
@@ -1252,10 +1241,7 @@ header .container {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.radio-input:checked 
-+ .radio-label 
-.custom-radio-input 
-.custom-radio-accepted {
+.radio-input:checked + .radio-label .custom-radio-input .custom-radio-accepted {
   opacity: 1;
 }
 
@@ -1341,7 +1327,7 @@ header .container {
   .main-form-input::placeholder,
   .main-form-comment::placeholder {
     font-size: 16px;
-    line-height: 150%
+    line-height: 150%;
   }
 
   .radio-teachers-subtitle {
@@ -1433,7 +1419,6 @@ header .container {
     background-color: #4dc274;
   }
 
-  
   .form-img-heading {
     font-size: 40px;
     line-height: 120%;
@@ -1442,7 +1427,7 @@ header .container {
     margin-bottom: 8px;
     color: #fff;
   }
-  
+
   .form-img-text {
     font-weight: 400;
     font-size: 16px;
@@ -1450,7 +1435,7 @@ header .container {
     text-align: center;
     color: rgba(255, 255, 255, 0.7);
   }
-  
+
   .form-img {
     display: block;
     position: absolute;
@@ -1765,7 +1750,7 @@ footer .logo {
 @media only screen and (min-width: 1280px) {
   .burger-menu-bg {
     display: none;
-  } 
+  }
 }
 /* ↓ cancel scroll if menu is open ↓ */
 
@@ -1815,7 +1800,7 @@ body.no-scroll {
   text-align: center;
 }
 
-.mob-nav-item:not(:last-child) {  
+.mob-nav-item:not(:last-child) {
   margin-bottom: 20px;
 }
 
@@ -1847,17 +1832,17 @@ body.no-scroll {
   fill: white;
   opacity: 0.8;
 
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-links-item:hover .footer-icon,
 .social-links-item:focus .footer-icon {
-  fill: #4dc274; 
+  fill: #4dc274;
 }
 
 .mob-social-link:hover .menu-icon,
 .mob-social-link:focus .menu-icon {
-  fill: #121417; 
+  fill: #121417;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1867,7 +1852,6 @@ body.no-scroll {
     max-width: 50vw;
     padding-top: 337px;
   }
-  
 }
 /* #endregion */
 
@@ -1882,9 +1866,4 @@ body.no-scroll {
   height: 2px;
   transition: width 400ms ease;
   width: 0;
-}
-
-@media only screen and (min-width: 768px) {
-  .splide__list {
-  }
 }
