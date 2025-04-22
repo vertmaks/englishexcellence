@@ -103,13 +103,17 @@ const emailEmptyError = document.querySelector('.form-email-error-empty');
 const nameInput = document.getElementById('userName');
 const nameEmptyError = document.querySelector('.form-name-error-empty');
 
+let nameTimeoutId = null;
+let emailTimeoutId = null;
+
 function nameCheck() {
   if (nameInput.value.trim() === '') {
     nameInput.style.borderColor = 'tomato';
     nameEmptyError.classList.remove('visually-hidden');
     nameEmptyError.classList.add('is-onscreen');
 
-    setTimeout(() => {
+    if (nameTimeoutId) clearTimeout(nameTimeoutId);
+    nameTimeoutId = setTimeout(() => {
       nameInput.style.borderColor = '';
       nameEmptyError.classList.remove('is-onscreen');
     }, 5000);
@@ -120,37 +124,51 @@ function nameCheck() {
     nameEmptyError.classList.remove('is-onscreen');
     nameEmptyError.classList.add('visually-hidden');
 
+    if (nameTimeoutId) clearTimeout(nameTimeoutId);
+
     return true;
   }
 }
 
 function emailCheck() {
+  const correctEmailRule = emailInput.value.match(
+    /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+  );
+
   if (emailInput.value === '') {
     emailInput.style.borderColor = 'tomato';
     emailEmptyError.classList.remove('visually-hidden');
     emailEmptyError.classList.add('is-onscreen');
     emailErrorMsg.classList.remove('is-onscreen');
 
-    setTimeout(() => {
+    if (emailTimeoutId) clearTimeout(emailTimeoutId);
+    emailTimeoutId = setTimeout(() => {
       emailInput.style.borderColor = '';
       emailEmptyError.classList.remove('is-onscreen');
       emailEmptyError.classList.add('visually-hidden');
     }, 5000);
 
     return false;
-  } else if (
-    !emailInput.value.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/)
-  ) {
+  } else if (!correctEmailRule) {
     emailInput.style.borderColor = 'tomato';
     emailErrorMsg.classList.remove('visually-hidden');
     emailErrorMsg.classList.add('is-onscreen');
     emailEmptyError.classList.remove('is-onscreen');
+
+    if (emailTimeoutId) clearTimeout(emailTimeoutId);
+    emailTimeoutId = setTimeout(() => {
+      emailInput.style.borderColor = '';
+      emailErrorMsg.classList.remove('is-onscreen');
+      emailErrorMsg.classList.add('visually-hidden');
+    }, 5000);
 
     return false;
   } else {
     emailInput.style.borderColor = '';
     emailErrorMsg.classList.remove('is-onscreen');
     emailEmptyError.classList.remove('is-onscreen');
+
+    if (emailTimeoutId) clearTimeout(emailTimeoutId);
 
     return true;
   }
